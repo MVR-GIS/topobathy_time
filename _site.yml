@@ -1,0 +1,8 @@
+name: "UMRS Topobathy"
+navbar:
+  title: "UMRS Topobathy"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html

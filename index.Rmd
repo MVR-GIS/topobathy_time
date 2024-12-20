@@ -1,0 +1,59 @@
+---
+title: "UMRS Topobathy"
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(timevis)
+library(htmltools)
+```
+
+## Acquisition Timeline {.tabset}
+
+### 2024 Fall
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+data  <- readr::read_csv("2024_fall.csv", show_col_types = FALSE)
+group <- readr::read_csv("pools.csv", show_col_types = FALSE)
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+tv <- timevis(data, 
+              groups = group, 
+              options = list(start = "2024-10-30",
+                             end   = "2024-12-10",
+                             stack = TRUE,
+                             orientation = "top",
+                             showCurrentTime = TRUE,
+                             margin = 2))
+
+style <- "
+.vis-timeline {
+  font-size: 15px;
+}
+
+.leaf {
+  background: DarkSeaGreen;
+  font-size: 11px;
+  padding: 2px;
+}
+
+.collect {
+  background: DarkKhaki;
+  font-size: 11px;
+  padding: 2px;
+}
+
+.ice {
+  background: LightSteelBlue;
+  font-size: 11px;
+  padding: 2px;
+}
+"
+
+tv_style <- htmltools::tagList(htmltools::tags$style(style), tv)
+tv_style
+```
+
+
+### 2025 Spring
+
+

@@ -1,0 +1,10 @@
+group,content,start,end,className
+Pool 1,leaf-off,2024-11-01,2024-11-05,leaf
+Pool 1,collect,2024-11-06,2024-11-10,collect
+Pool 1,ice-in,2024-11-11,2024-11-15,ice
+Pool 2,leaf-off,2024-11-05,2024-11-10,leaf
+Pool 2,collect,2024-11-11,2024-11-15,collect
+Pool 2,ice-in,2024-11-16,2024-11-20,ice
+Pool 3,leaf-off,2024-11-10,2024-11-15,leaf
+Pool 3,collect,2024-11-16,2024-11-20,collect
+Pool 3,ice-in,2024-11-21,2024-11-25,ice

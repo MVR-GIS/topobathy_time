@@ -1,0 +1,29 @@
+---
+title: "UMRS Topobathy"
+---
+
+```{r}
+library(timevis)
+library(htmltools)
+```
+
+```{r}
+data <- data.frame(
+  group   = c("Pool 1", "Pool 1", "Pool 1", "Pool 2", "Pool 2", "Pool 2", "Pool 3", "Pool 3", "Pool 3"),
+  content = c("leaf-off", "collect", "ice-in", "leaf-off", "collect", "ice-in", "leaf-off", "collect", "ice-in"),
+  start   = c("2024-11-01", "2024-11-06","2024-11-11", "2024-11-05", "2024-11-11", "2024-11-16","2024-11-10", "2024-11-16", "2024-11-21"),
+  end     = c("2024-11-05", "2024-11-10","2024-11-15", "2024-11-10", "2024-11-15", "2024-11-20","2024-11-15", "2024-11-20", "2024-11-25"),
+  className = c("leaf", "collect", "ice", "leaf", "collect", "ice", "leaf", "collect", "ice")
+)
+
+group <- data.frame(
+  id      = c("Pool 1", "Pool 2", "Pool 3", "Pool 4"),
+  content = c("Pool 1", "Pool 2", "Pool 3", "Pool 4")
+)
+
+readr::write_csv(data, "2024_fall.csv")
+readr::write_csv(group, "pools.csv")
+
+rm(data, group)
+```
+
